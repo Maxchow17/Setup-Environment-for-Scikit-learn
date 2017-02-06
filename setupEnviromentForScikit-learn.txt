@@ -1,0 +1,35 @@
+Step One:
+Install Homebrew
+Execute Command-line:
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+to install Homebrew at a Terminal prompt.
+
+Reference for Homebrew:
+http://docs.brew.sh/
+
+
+-------------------------------------------------------------------
+Step Two:
+Intall pyenv-virtualenv by Homebrew:
+
+1. #brew install pyenv-virtualenv
+2. after installation, needed to add :
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+to profile.
+
+
+
+-------------------------------------------------------------------
+Step Three:
+Create virtual environment with pyenv and virtualenv.
+$ pyenv install --list //list availabe Python versions.
+$ pyenv install 2.7.13 //install the specified version(2.7.13). 
+$ pyenv versions //list installed Python versions.
+$ pyenv virtualenv scikit-2.7.13 //create virtual environment(scikit-2.7.13) base on current version of python via virtualenv.
+
+eval "$(pyenv init -)" //To initialize pyenv
+eval "$(pyenv virtualenv-init -)”//To initialize pyenv virtualenv
+$ pyenv activate  //activate current pyenv environment
+. . . do something
+$ pyenv deactivate //deactivate current pyenv environment
